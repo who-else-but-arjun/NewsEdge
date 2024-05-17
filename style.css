@@ -473,9 +473,9 @@ footer {
 .menu-btn {
     display: none;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .card-grid {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(1, 2fr);
         grid-gap: 15px;
     }
 }
