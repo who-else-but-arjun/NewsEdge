@@ -636,25 +636,25 @@ footer {
         background-color: #949494;
     }
     .container * {
-        font-size: 0.9em; /* Decrease font size of all elements */
-        padding: 5px; /* Decrease padding */
-        margin: 5px 0; /* Decrease margins */
+        font-size: 0.9em;
+        padding: 5px; 
+        margin: 5px 0; 
     }
     
     .container h2, .container h3, .container h4, .container h5, .container h6 {
-        font-size: 1em; /* Decrease font size for headings */
+        font-size: 1em; 
     }
     
     .container p {
-        font-size: 0.9em; /* Decrease font size for paragraphs */
+        font-size: 0.9em; 
     }
 
     .container img {
-        max-width: 100%; /* Ensure images fit within the container */
+        max-width: 100%;
         height: auto;
     }
 
     .container .card {
-        padding: 10px; /* Adjust padding for cards */
+        padding: 10px; 
     }
 }
