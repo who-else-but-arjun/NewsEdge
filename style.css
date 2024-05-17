@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    font-size: 17px;
+}
 .dm-serif-display-regular {
     font-family: "DM Serif Display", serif;
     font-weight: 600;
@@ -11,14 +14,36 @@
 body {
     font-family: "DM Serif Display", serif;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 header {
+    width: 100%;
     background-image: url("bg.jpg");
     background-size: cover;
     color: #fff;
     text-align: center;
 }
 
+main {
+    padding: 0.8rem;
+}
+
+#container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.content {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
 .header-bg {
     position: relative;
     background-size: cover;
@@ -36,6 +61,7 @@ h1 {
 }
 
 nav {
+    width: 100%;
     background-color: #131313;
     padding: 10px;
     padding-left: 15px;
@@ -45,6 +71,7 @@ nav {
 }
 
 nav ul {
+    width: 100%;
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -69,7 +96,7 @@ nav ul li a:hover {
 .search-container {
     padding-right:20px ;
     position: relative;
-    display: flex;
+    display:flexbox;
     align-items: center;
 }
 
@@ -248,11 +275,10 @@ nav ul li a:hover {
 .card-grid {
     background-color: #efefef;
     border-radius: 20px;
-    margin: 15px;
-    margin-right: 0px;
-    width: 70%;
+    margin: 10px;
+    max-width: 70%;
     float: left;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -447,8 +473,16 @@ footer {
 .menu-btn {
     display: none;
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 15px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    :root{
+        font-size: 10px;
+    }
     header {
         padding: 0px;
     }
@@ -481,7 +515,7 @@ footer {
         text-align: center;
         padding: 0;
         margin: 10px 0;
-        list-style-type: none; /* Remove default list styles */
+        list-style-type: none;
     }
     
     nav ul li {
@@ -516,31 +550,32 @@ footer {
     
     .breaking-news span {
         font-size: 16px;
-        white-space: nowrap;
+        white-space: normal; 
         overflow: hidden;
         text-overflow: ellipsis;
     }
     .current-date {
-        margin-top: auto; /* Move current date to the bottom */
+        margin-top: auto; 
         margin-left: auto;
-        margin-right: 20px; /* Adjust right margin */
-    }#container {
-        flex-direction: column;
+        margin-right: 20px; 
     }
-    
-    .card-grid,
-    .list-grid {
-        width: 100%;
+    #container {
+        flex-direction : column;
+    }    
+    .card-grid {
+        max-width: 100%;
     }
     
     .card-grid {
         order: 1; 
     }
-    
     .list-grid {
+        width: 100%; 
+        max-width: 600px;
         order: 2;
-        overflow: hidden; /* Disable overflow */
-        max-height: calc(100vh - 200px); /* Adjust the height according to your layout */
+        overflow: hidden; 
+        max-height: calc(100vh - 200px); 
+        margin: 0 auto; 
     }
     
     .footer {
