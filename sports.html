@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script>// Fetch entertainment news data from the JSON server
+        fetch(url)
+            .then(function(response) {
+                // Check if the response was successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                // Parse the JSON response
+                return response.json();
+            })
+            .then(function(data) {
+                // Log the parsed data
+                console.log(data);
+                // Update the inner HTML of the entertainment grid with the response data
+                generateCards(data.articles, 'sports-grid');
+            })
+            .catch(function(error) {
+                // Handle errors
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-bg">
+            <h1><span style="font-size: 1.2em;">N</span>ews<span style="font-size: 1.2em;">E</span>dge</h1>
+            <nav>
+                <button class="menu-btn">Menu</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="techno.html">Technology</a></li>
+                    <li><a href="world.html">World</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li class="dropdown">
+                        <a href="sports.html">Sports</a>
+                        <div class="dropdown-content">
+                            <a href="nat_sports.html">National</a>
+                            <a href="int_sports.html">International</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="breaking-news-section">
+        <span id="heading-bkn">Breaking News : <div class="breaking-news"></div></span>
+        <div class="current-date" id="current-date"></div>
+    </section>
+    <hr>
+
+    <div id="container">
+        <div id="sports-grid"class="card-grid"></div>
+        <div class="list-grid">
+            <div class="sidebar">
+                <button class="side-bar" onclick="filterArticles('latest')">Latest</button>
+                <button class="side-bar" onclick="filterArticles('popular')">Popular</button>
+            </div>
+            <div id="newsContainer"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <article>
+                    <div class="logo">
+                        <h2 style="font-family:'Franklin Gothic Medium'"><span style="font-size: 1.2em;">N</span>ews<span style="font-size: 1.2em;">E</span>dge</h2>
+                    </div>
+                    <p>
+                        Made By Arjun Verma 
+                        Web Development Task 
+                        Coding Week 2024
+                    </p>
+                </article>
+                <article>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="world.html">World</a>
+                    <a href="entertainment.html">Entertainment</a>
+                    <a href="business.html">Business</a>
+                    <a href="politics.html">Politics</a>
+                </article>
+                <article>
+                    <a href="sports.html">Sports</a>
+                    <a href="nat_sports.html">National Sports</a>
+                    <a href="int_sports.html">International Sports</a>
+                    <a href="techno.html">Technology</a>
+                </article>
+                <article>
+                    <h4>FEEDBACK</h4>
+                    <p>Submit here your feedback</p>
+                    <input type="messege" placeholder="..." />
+                    <button id="sub-btn"><a href="#">Submit</a></button>
+                </article>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2024, All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
