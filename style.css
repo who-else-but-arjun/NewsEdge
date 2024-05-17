@@ -632,26 +632,5 @@ footer {
     #sub-btn:hover {
         background-color: #949494;
     }
-    #container * {
-        font-size: 0.9em;
-        padding: 5px; 
-        margin: 5px 0; 
-    }
     
-    #container h2, #container h3, #container h4, #container h5, #container h6 {
-        font-size: 1em; 
-    }
-    
-    #container p {
-        font-size: 0.9em; 
-    }
-
-    #container img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    #container .card {
-        padding: 10px; 
-    }
 }
